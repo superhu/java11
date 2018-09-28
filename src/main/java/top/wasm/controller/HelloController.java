@@ -11,13 +11,10 @@ public class HelloController {
 
     @GetMapping("/hi")
     public String hello(@ModelAttribute("name") String name){
-        var str = " hello world ";
-
-        System.out.println(str.strip());
 
 
 
-        return "hello "+name.repeat(3);
+        return "hello "+name;
     }
 
 
