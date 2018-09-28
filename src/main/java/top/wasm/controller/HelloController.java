@@ -1,4 +1,4 @@
-package top.wasm.java11;
+package top.wasm.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;

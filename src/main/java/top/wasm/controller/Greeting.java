@@ -1,4 +1,4 @@
-package top.wasm.java11;
+package top.wasm.controller;
 
 public class Greeting {
 

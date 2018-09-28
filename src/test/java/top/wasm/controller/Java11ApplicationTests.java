@@ -1,4 +1,4 @@
-package top.wasm.java11;
+package top.wasm.controller;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

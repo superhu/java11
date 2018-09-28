@@ -1,4 +1,4 @@
-package top.wasm.java11;
+package top.wasm.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;

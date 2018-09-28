@@ -1,4 +1,4 @@
-package top.wasm.java11;
+package top.wasm.controller;
 
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
