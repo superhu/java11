@@ -18,12 +18,15 @@
     <li class="hex"><a target="_blank" class="hexIn" href="3.jpg"><img src="3.jpg" alt=""> <h1>胡橘</h1><p>胡橘</p> </a> </li>
     <li class="hex"><a target="_blank" class="hexIn" href="4.jpg"><img src="4.jpg" alt=""> <h1>胡橘</h1><p>胡橘</p> </a> </li>
     <li class="hex"><a target="_blank" class="hexIn" href="5.jpg"><img src="5.jpg" alt=""> <h1>胡橘</h1><p>胡橘</p> </a> </li>
-    <li class="hex more" ><a  class="hexIn" href="javascript:loadMore(10)"><img src="more.jpg" alt=""> <h1>加载更多</h1><p>胡橘</p> </a> </li>
+    <li class="hex more" ><a  class="hexIn" href="javascript:loadMore(5)"><img src="more.jpg" alt=""> <h1>回车键加载更多</h1> </a> </li>
 </ul>
 <script>
     function loadMore(num){
         var html='';
         var a = $('li').length+1;
+        if(a>=200){
+            return;
+        }
         for(var i=a;i<=a+num;i++){
             var str =  '<li class="hex"><a target="_blank" class="hexIn" href="'+i+'.jpg"><img src="'+i+'.jpg" onerror ="src=\'404.jpg\'" alt="木有了" /> <h1>胡橘</h1><p>胡橘</p> </a> </li>';
             html+=str;
@@ -32,6 +35,16 @@
         $(html).insertBefore($('.more'));
 
     }
+
+    document.onkeydown = function (e) {
+
+        if (e.keyCode == 13) {
+            event.preventDefault();
+            loadMore(5)
+            window.scrollTo(0,$('.more').offset().top);
+        }
+    }
+
 
 
 
