@@ -25,13 +25,14 @@
         var html='';
         var a = $('li').length+1;
         for(var i=a;i<=a+num;i++){
-            var str =  '<li class="hex"><a target="_blank" class="hexIn" href="'+i+'.jpg"><img src="'+i+'.jpg" alt="" /> <h1>胡橘</h1><p>胡橘</p> </a> </li>';
+            var str =  '<li class="hex"><a target="_blank" class="hexIn" href="'+i+'.jpg"><img src="'+i+'.jpg" onerror ="src=\'404.jpg\'" alt="木有了" /> <h1>胡橘</h1><p>胡橘</p> </a> </li>';
             html+=str;
         }
 
         $(html).insertBefore($('.more'));
 
     }
+
 
 
 
