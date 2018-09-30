@@ -13,17 +13,14 @@
     <script src="/js/jquery.min.js" type="text/javascript"></script>
 
 <ul id="images" class="main" >
-    <li class="hex"><a target="_blank" class="hexIn" href="1.jpg"><img src="1.jpg" alt=""> <h1>胡橘</h1><p>胡橘</p> </a> </li>
-    <li class="hex"><a target="_blank" class="hexIn" href="2.jpg"><img src="2.jpg" alt=""> <h1>胡橘</h1><p>胡橘</p> </a> </li>
-    <li class="hex"><a target="_blank" class="hexIn" href="3.jpg"><img src="3.jpg" alt=""> <h1>胡橘</h1><p>胡橘</p> </a> </li>
-    <li class="hex"><a target="_blank" class="hexIn" href="4.jpg"><img src="4.jpg" alt=""> <h1>胡橘</h1><p>胡橘</p> </a> </li>
-    <li class="hex"><a target="_blank" class="hexIn" href="5.jpg"><img src="5.jpg" alt=""> <h1>胡橘</h1><p>胡橘</p> </a> </li>
+
     <li class="hex more" ><a  class="hexIn" href="javascript:loadMore(5)"><img src="more.jpg" alt=""> <h1>回车键</h1> <p>加载更多</p></a> </li>
 </ul>
 <script>
+    loadMore(7)
     function loadMore(num){
         var html='';
-        var a = $('li').length+1;
+        var a = $('li .hex').length+1;
         if(a>=200){
             return;
         }
