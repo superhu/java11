@@ -12,42 +12,26 @@
 <body>
     <script src="/js/jquery.min.js" type="text/javascript"></script>
 
-<ul id="images">
-
+<ul id="images" class="main" >
+    <li class="hex"><a target="_blank" class="hexIn" href="1.jpg"><img src="1.jpg" alt=""> <h1>胡橘</h1><p>胡橘</p> </a> </li>
+    <li class="hex"><a target="_blank" class="hexIn" href="2.jpg"><img src="2.jpg" alt=""> <h1>胡橘</h1><p>胡橘</p> </a> </li>
+    <li class="hex"><a target="_blank" class="hexIn" href="3.jpg"><img src="3.jpg" alt=""> <h1>胡橘</h1><p>胡橘</p> </a> </li>
+    <li class="hex"><a target="_blank" class="hexIn" href="4.jpg"><img src="4.jpg" alt=""> <h1>胡橘</h1><p>胡橘</p> </a> </li>
+    <li class="hex"><a target="_blank" class="hexIn" href="5.jpg"><img src="5.jpg" alt=""> <h1>胡橘</h1><p>胡橘</p> </a> </li>
+    <li class="hex more" ><a  class="hexIn" href="javascript:loadMore(10)"><img src="more.jpg" alt=""> <h1>加载更多</h1><p>胡橘</p> </a> </li>
 </ul>
 <script>
-    var batch = 5;
     function loadMore(num){
         var html='';
         var a = $('li').length+1;
-        console.log('a='+a);
         for(var i=a;i<=a+num;i++){
             var str =  '<li class="hex"><a target="_blank" class="hexIn" href="'+i+'.jpg"><img src="'+i+'.jpg" alt="" /> <h1>胡橘</h1><p>胡橘</p> </a> </li>';
             html+=str;
         }
-        $('#images').append(html);
+
+        $(html).insertBefore($('.more'));
+
     }
-    // document.body.onscroll=function(){
-    //     var sum = this.scrollHeight;
-    //     console.log('scroll:'+sum);
-    //     if (sum <= $(this).scrollTop() + $(this).height()) {
-    //         loadMore(10);
-    //     }
-    // };
-    // $("body").unbind("scroll").bind("scroll", function (e) {
-    //
-    // });
-    loadMore(batch);
-
-    var isbool=true;//触发开关，防止多次调用事件
-
-    $(window).scroll(function() {
-        if (($(this).scrollTop() + $(window).height()) >= $(document).height() && isbool==true) {
-            isbool=false;
-            console.log('scroll:');
-            loadMore(batch);
-        }
-    });
 
 
 
