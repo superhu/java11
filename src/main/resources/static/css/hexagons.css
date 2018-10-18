@@ -101,7 +101,7 @@ body {
 }
 
 /*** SPACING AND SIZING *****************************************************************/
-@media (min-width:1201px) { /* <- 5-4  hexagons per row */
+@media (min-width:1001px) { /* <- 5-4  hexagons per row */
     .hex {
         width: 19.2%; /* = (100-4) / 5 */
         padding-bottom: 22.170%; /* =  width / sin(60deg) */
@@ -140,7 +140,7 @@ body {
         margin-right: 1%;
     }
 }
-@media (max-width: 1200px) and (min-width:901px) {/* <- 4-3  hexagons per row */
+@media (max-width: 1200px) and (min-width:701px) {/* <- 4-3  hexagons per row */
     .hex {
         width: 24.25%; /* = (100-3) / 4 */
         padding-bottom: 28.001%; /* =  width / sin(60deg) */
