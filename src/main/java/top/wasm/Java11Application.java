@@ -1,15 +1,7 @@
 package top.wasm;
 
-import org.apache.catalina.Context;
-import org.apache.catalina.connector.Connector;
-import org.apache.tomcat.util.descriptor.web.SecurityCollection;
-import org.apache.tomcat.util.descriptor.web.SecurityConstraint;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
-import org.springframework.context.annotation.Bean;
 
 /**
  * SpringBoot2.0启动程序
@@ -23,7 +15,7 @@ public class Java11Application {
         SpringApplication.run(Java11Application.class, args);
     }
     //如果没有使用默认值80
-    @Value("${http.port:80}")
+   /* @Value("${http.port:80}")
     Integer httpPort;
 
     //正常启用的https端口 如443
@@ -61,4 +53,6 @@ public class Java11Application {
         //监听到http的端口号后转向到的https的端口号
         connector.setRedirectPort(httpsPort);
         return connector;
-    }}
+    }
+    */
+    }
