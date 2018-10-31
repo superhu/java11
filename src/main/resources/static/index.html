@@ -11,7 +11,7 @@
 </head>
 <body>
 <script src="/js/jquery.min.js" type="text/javascript"></script>
-<audio autoplay="true" loop=""><source src="images/videos/libai.mp3"></audio>
+<audio preloadplay="true" autoplay="true" id="mp3" src="images/videos/libai.mp3"></audio>
 <ul id="images" class="main">
     <li class="hex"><a target="_blank" class="hexIn" href="images/1.jpg"><img src="images/1.jpg" alt="">
         <h1>1</h1>
@@ -41,6 +41,12 @@
 <script>
 
     function loadMore(num) {
+        var mp3 = document.getElementById('mp3');
+        if(!$('#mp3').hasClass('play')){
+            mp3.play();
+            $('#mp3').addClass('play');
+        }
+
         var html = '';
         var a = $('li').length;
         if (a >= 200) {
@@ -63,6 +69,8 @@
             loadMore(5)
         }
     }
+
+
 
 
 </script>
