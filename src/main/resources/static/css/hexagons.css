@@ -103,7 +103,7 @@ body {
 /*** SPACING AND SIZING *****************************************************************/
 @media (min-width:1001px) { /* <- 5-4  hexagons per row */
     .hex {
-        width: 19.2%; /* = (100-4) / 5 */
+        width: 17.2%; /* = (100-4) / 5 */
         padding-bottom: 22.170%; /* =  width / sin(60deg) */
     }
     .hex:nth-child(9n+6),
